@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ButtonText
+//  ButtonImage
 //
 //  Created by Seungjun Lim on 17/05/2019.
 //  Copyright © 2019 Seungjun Lim. All rights reserved.
@@ -14,11 +14,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        btn.setTitle("Hello", for: .normal)
-        btn.setTitle("Haha", for: .highlighted)
         
-        btn.setTitleColor(UIColor.red, for: .normal)
+        let normalImage = UIImage(named: "plus-normal")
+        let highlightedImage = UIImage(named: "plus-highlighted")
+        
+        btn.setImage(normalImage, for: .normal)
+        btn.setImage(highlightedImage, for: .highlighted)
+
     }
+
+
 }
 
