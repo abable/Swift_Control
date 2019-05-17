@@ -25,25 +25,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-Hn-bqV">
-                                <rect key="frame" x="184" y="388" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTp-Hn-bqV">
+                                <rect key="frame" x="142" y="372" width="141" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="report:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Vr-1w-EZG"/>
+                                </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-e5-s6P">
-                                <rect key="frame" x="147" y="780" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-e5-s6P">
+                                <rect key="frame" x="0.0" y="780" width="414" height="29"/>
                                 <segments>
                                     <segment title="Default"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                    <segment title=""/>
+                                    <segment title="Highlihted"/>
+                                    <segment title="Selected"/>
+                                    <segment title="Disabled"/>
                                 </segments>
+                                <connections>
+                                    <action selector="stateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Io-Bu-faM"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5wT-e5-s6P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2JI-lo-gsa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5wT-e5-s6P" secondAttribute="bottom" constant="54" id="Y5n-eA-RqF"/>
+                            <constraint firstItem="KTp-Hn-bqV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="cmp-Bv-dkA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTp-Hn-bqV" secondAttribute="trailing" constant="131" id="srI-ZD-o3c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5wT-e5-s6P" secondAttribute="trailing" id="tFl-8l-3bi"/>
+                            <constraint firstItem="5wT-e5-s6P" firstAttribute="top" secondItem="KTp-Hn-bqV" secondAttribute="bottom" constant="336" id="va7-2c-zct"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="KTp-Hn-bqV" id="SwD-bE-RrR"/>
+                        <outlet property="stateLabel" destination="ZV2-iM-2ob" id="eX6-Ce-b8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
